@@ -71,36 +71,36 @@ from Imperial and a PhD in dependent type theory from Queen Mary.
 We envisage this chapter sitting in {\emph{Section I: Examples of the
 Application of Traditional Software Engineering Practices to
 Science}}, as it will describe generalisable experiences with applying
-traditional software engineering practices to the development of
-scientific software particularly, illustrated by an appropriate case
-studies and real world examples. Our intent here is to discuss the 
-not only the issues which may arise in interdisciplinary work (which
-have been covered in detail elsewhere) but rather to draw out the
+modern software engineering practices to the development, particularly, of
+scientific software. We will illustrated our description with appropriate case
+studies and real world examples. Our intent here is to discuss
+not only the issues which may arise in interdisciplinary work 
+%(which have been covered in detail elsewhere)
+but also to draw out the
 characteristics of research scientific software development which 
 distinguish it from conventional software engineering. In it we hope
 to highlight the issues which arise that are unique to research software
-and how they we have encountered and (sometimes) successfully overcome 
+and how we have encountered and (sometimes) successfully overcome 
 them. In this chapter we will draw from our wide range of experiences, but
-we will focus on two software projects which we have been involved with-
-the BioModelAnalyzer (Benque et al) and the more recent, related Cellular 
+we will focus on two software projects which we have been involved with: 
+the BioModelAnalyzer (Benque et al); and the more recent, related Cellular 
 Dynamics Engine (Hall et al, Biophysical Journal 2015). We intend to cover 
 specifically:
 
 \begin{itemize}
-\item the challenges of testing in an environment where behaviours 
-	are not known \emph{a priori}
-\item balancing scientific requirements (such as implementing alternative 
-	approaches rapidly) against common needs code optimsation, 
-	readability etc
-\item user driven discovery- the unexpected identifaction of 
+\item The challenges of testing in an environment where behaviours 
+	are not known \emph{a priori}; 
+\item Balancing scientific requirements (such as implementing alternative 
+	approaches rapidly) against common engineering needs of code optimsation, 
+	readability, etc; \item user driven discovery- the unexpected identifaction of 
 	scientific/algorithmic issues
-\item issues encountered when separating models and code
-\item user interface development to bridge disciplines
-\item chapters describing practices that are being adopted in
-  scientific environments, e.g. version control or unit testing;
-\item chapters describing practices that have potential benefit to
-  science but currently lack adoption, sufficient evidence, or case
-  studies, e.g. Continuous Integration, code review, documentation;
+\item Issues encountered when separating models and code; 
+\item The linking of {\em in vivo} and {\em in silico} work flows;
+\item Issues encountered in maintaining a scientific codebase in a diverse, 
+cross-disciplinary project; 
+\item Issues encountered in maintaining and extending a model database in a diverse, cross-disciplinary project;
+\item User interface development to help in cross-disciplinary work;
+\item Practices that we used but should be more widely adopted in scientific environments: version control, unit testing, Continuous Integration, code review, documentation. 
 \end{itemize}
 
 \section*{Abstract}
@@ -114,8 +114,8 @@ the shifting specifications a non-scientific programmer may face, the
 specifications for scientific software may simply not exist. People 
 will approach problems from multiple angles, effectively panning for 
 scientific gold, unsure of their tools and reliant on their own judgement.
-The fundemental problem- not knowing what the "right" answer should be, 
-whilst attempting to make reproducible discoveries- requires a modified 
+The fundemental problem --- not knowing what the "right" answer should be, 
+whilst attempting to make reproducible discoveries --- requires a modified 
 approach. Here we detail the pressures and problems of working in this 
 rarefied environment, and highlight lessons which are valuable for 
 both scientific and software cultures.
