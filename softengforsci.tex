@@ -1,11 +1,12 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[top=1.8cm,bottom=1.8cm,left=1.8cm,right=1.8cm,asymmetric]{geometry}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm,asymmetric]{geometry}
 \usepackage{url}
 \usepackage{paralist}
 \usepackage{authblk}
 \usepackage[colorlinks=true,hyperfootnotes=true]{hyperref}
 
-\title{Chapter Proposal for Software Engineering for Science}
+\title{Chapter Proposal for Software Engineering for Science:\\
+  \emph{Best Practices for Sustainable Scientific Software Development}}
 
 % names
 \author[1]{Tom Crick}
@@ -29,64 +30,93 @@
 \begin{document}
 \maketitle
 
+\vspace{-1cm}
 \begin{abstract}
-Scientific software development represents a borderland in the
-explosion of code. It combines problems and people in a unique way;
-the scientists involved are not programmers, and do not typically have
-the skill sets and broader awareness of standard approaches to ensure
-code reliability.  Fixing this is however not just issue of education
-or culture; in contrast to the shifting specifications an industry
-programmer may face, the specifications for scientific software may
-simply not exist. People will approach problems from multiple angles,
-effectively panning for scientific gold, unsure of their tools and
-reliant on their own judgement.  The fundamental problem --- not
-knowing what the ``right'' answer should be, whilst attempting to make
-reproducible discoveries --- requires a modified approach. Here we
-detail the pressures and problems of working in this rarefied
-environment, and highlight lessons which are valuable for both
+Research software development represents a borderland in the explosion
+of code across the sciences, engineering and other increasingly
+computational disciplines. It combines problems and people in a unique
+way; the researchers involved are not programmers, and do not
+typically have the skill sets and broader awareness of standard
+approaches to ensure code reliability.  Fixing this is however not
+just issue of education or culture; in contrast to the shifting
+constraints and requirements an industry programmer may face, the
+specifications for scientific software may simply not exist. People
+will approach problems from multiple angles, effectively panning for
+research gold, unsure of their tools and reliant on their own
+judgement.  The fundamental problem --- not knowing what the ``right''
+answer should be, whilst attempting to make rigorous reproducible
+discoveries --- requires a modified approach. In this chaper, we
+highlight the pressures and problems of working in this rarefied
+environment, encapsulating lessons which are valuable for both
 scientific and software cultures.
 \end{abstract}
 
 \section*{Outline}
 
-In this chapter, we will discuss not only the issues which may arise
-in interdisciplinary work but also to draw out the characteristics of
-research scientific software development and how it is distinguished
-from conventional software engineering. We will highlight the issues
-which arise that are unique to research software and how we have
-encountered and (sometimes) successfully overcome them. We will draw
-from our wide range of experiences, but specifically focusing on two
-key scientific software projects which we have been involved with: the
-BioModelAnalyzer\footnote{\url{http://biomodelanalyzer.research.microsoft.com/}}~\cite{benque-et-al:2012};
-and the more recent, related Cellular Dynamics
-Engine~\cite{hall-et-al:2015}. We intend to cover specifically:
+In this chapter, we will highlight and discuss not only the issues
+which may arise in interdisciplinary computational research but also
+to draw out the characteristics of research software development and
+how it is distinguished from conventional software engineering. We
+will present the various issues which arise that are unique or
+abundant in research software and how we have encountered and
+(sometimes) successfully overcome them. Through a structured
+narrative, we will draw from our collective wide range of experiences,
+contextualised and illustrated by two key scientific software projects
+which we have been involved with: the
+{\emph{BioModelAnalyzer}}\footnote{\url{http://biomodelanalyzer.research.microsoft.com/}}~\cite{benque-et-al:2012};
+and the more recent, related {\emph{Cellular Dynamics
+Engine}}~\cite{hall-et-al:2015}. We intend to cover specifically:\\
 
-\begin{itemize}
-\item The challenges of testing in an environment where behaviours 
-	are not known \emph{a priori}; 
+\begin{compactitem}
+\item Real-world research context:
+\begin{compactitem}
 \item Balancing scientific requirements (such as implementing alternative 
 	approaches rapidly) against common engineering needs of code optimisation, 
 	readability, etc; 
-\item user driven discovery: the unexpected identification of 
+\item User-driven discovery: the unexpected identification of 
 	scientific/algorithmic issues;
-\item Issues encountered when separating models and code; 
 \item The linking of {\em in vivo} and {\em in silico} work flows;
+\item Socio-cultural and cyberinfrastructural issues of embedding research software
+  sustainability and reproducibility into workflows;
+\end{compactitem}
+\item Software engineering challenges:
+\begin{compactitem}
+\item The challenges of testing in an environment where behaviours 
+	are not known \emph{a priori}; 
+\item Issues encountered when separating models and code; 
 \item Issues encountered in maintaining a scientific codebase in a diverse, 
 cross-disciplinary project; 
-\item Issues encountered in maintaining and extending a model database in a diverse, cross-disciplinary project;
+\item Issues encountered in maintaining and extending a model database
+  in a diverse, cross-disciplinary project;
+\end{compactitem}
+\item Recommendations and sharing of best practice:
+\begin{compactitem}
 \item User interface development to help in cross-disciplinary work;
-\item Practices that we used but should be more widely adopted in
+\item Practices we have used that can and should be more widely adopted in
   scientific environments, for example: version control, unit testing,
   continuous integration, code review, robust documentation, etc. 
-\end{itemize}
+\item A roadmap for researchers of how best to integrate and adopt these practices.\newline
+\end{compactitem}
+\end{compactitem}
 
 % http://se4science.org/BookChapters.htm
 We envisage this chapter sitting in {\emph{Section I: Examples of the
 Application of Traditional Software Engineering Practices to
-Science}}, as it will describe generalisable experiences with applying
-modern software engineering practices to the development,
-particularly, of scientific software. We will illustrate our narrative
-with appropriate case studies and real world examples.
+Science}}, as it will describe a number of generalisable experiences
+from our background of applying modern software engineering practices
+to the development of scientific software. The topics listed above
+will build on each other through the narrative, illustrated and
+contextualised throughout the chapter with integrated case studies and
+real world examples.
+
+While we recognise that we will present a number of recommendations
+for improving scientific software that may already be known
+individually, we will provide a clear narrative and compelling
+real-world examples to highlight where we have been successful (and
+perhaps more usefully, unsuccessful), as well as addressing some of
+the wider cultural issues within the scientific research community on
+how these problems can be made more tractable for scientific software
+developers and how these practices could be more widely adopted.
 
 \section*{Authors}
 
@@ -95,28 +125,28 @@ engineering, from real-world tool development across a number of
 application domains, through to associated policy. They have
 previously published work in this space, focusing on reproducibility
 and sharing of scientific software
-models~\cite{crick-et-al_wssspe2,crick-et-al_recomp2014}, as well as
-proposing e-infrastructure and workflow models for encouraging and
-supporting reproducibility in computational science and
-engineering\footnote{\url{http://arxiv.org/a/crick_t_1.html}}.
+models~\cite{crick-et-al_wssspe2,crick-et-al_recomp2014,crick-et-al_jors},
+as well as proposing e-infrastructure and workflow models for
+encouraging and supporting reproducibility in computational science
+and engineering\footnote{\url{http://arxiv.org/a/crick_t_1.html}}.
 
 Dr Tom Crick\footnote{\url{http://drtomcrick.com}} is a Senior
 Lecturer in Computing Science at Cardiff Metropolitan University,
 having completed his PhD and post-doctoral research at the University
-of Bath. His research interests cut across computational science:
-knowledge representation and reasoning, optimisation, big data, social
-network analysis and high performance computing. He is the Nesta Data
-Science Fellow, a 2014 Fellow of the Software Sustainability Institute
-(EPSRC) and a member of {\emph{HiPEAC}}, the European FP7 Network of
-Excellence on High Performance and Embedded Architecture and
-Compilation.
+of Bath. His research interests cut across data and
+computational-intensive domains: data science, knowledge
+representation and reasoning, optimisation, social network analysis
+and high performance computing. He is the Nesta Data Science Fellow, a
+2014 Fellow of the Software Sustainability Institute (EPSRC) and a
+member of {\emph{HiPEAC}}, the European FP7 Network of Excellence on
+High Performance and Embedded Architecture and Compilation.
 
 Dr Benjamin
 A. Hall\footnote{\url{http://www.mrc-cu.cam.ac.uk/hall.html}} is a
 Royal Society University Research Fellow, developing hybrid and formal
 models of carcinogenesis and biological signalling at the MRC Cancer
 Unit, University of Cambridge. He previously worked at Microsoft
-Research Cambridge (on BioModelAnalyzer with Jasmine Fisher), UCL and
+Research Cambridge (on {\emph{BioModelAnalyzer}} with Jasmine Fisher), UCL and
 the University of Oxford. As part of his role at Oxford, he was one of
 two Apple Laureates, awarded by Apple and the Oxford Supercomputing
 Centre for the project {\emph{A biomolecular simulation
@@ -126,9 +156,9 @@ Oxford.
 Dr Samin
 Ishtiaq\footnote{\url{http://research.microsoft.com/en-us/people/sishtiaq/}}
 is Principal Engineer in the Programming Principles and Tools group at
-Microsoft Research Cambridge. He currently works on the SLAyer
-(Separation Logic-based memory safety for C programs), TERMINATOR
-(program termination) and BMA projects. Samin joined MSR in April
+Microsoft Research Cambridge. He currently works on the {\emph{SLAyer}}
+(Separation Logic-based memory safety for C programs), {\emph{TERMINATOR}}
+(program termination) and {\emph{BioModelAnalyzer}} projects. Samin joined MSR in April
 2008. Before that (2000-2008), he worked in CPU modelling and
 verification at ARM, helping to tape-out the Cortex A8, Cortex M3 and
 SC300 processors, and the AMBA bus protocol checker. Samin has an MEng
